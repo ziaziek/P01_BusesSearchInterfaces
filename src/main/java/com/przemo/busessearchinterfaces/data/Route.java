@@ -12,26 +12,17 @@ package com.przemo.busessearchinterfaces.data;
 public class Route {
     
     private int id;
-    private int idLine;
 
     public int getId() {
         return id;
     }
 
-    public int getIdLine() {
-        return idLine;
+    public Station getStation() {
+        return station;
     }
 
-    public void setIdLine(int idLine) {
-        this.idLine = idLine;
-    }
-
-    public int getIdStation() {
-        return idStation;
-    }
-
-    public void setIdStation(int idStation) {
-        this.idStation = idStation;
+    public void setStation(Station idStation) {
+        this.station = idStation;
     }
 
     public String getArrivalTime() {
@@ -49,7 +40,7 @@ public class Route {
     public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
     }
-    private int idStation;
+    private Station station;
     private String arrivalTime;
     private String departureTime;
     

@@ -17,12 +17,12 @@ public class Distance {
         return id;
     }
 
-    public int getIdStationFrom() {
-        return idStationFrom;
+    public Station getStationFrom() {
+        return stationFrom;
     }
 
-    public int getIdStationTo() {
-        return idStationTo;
+    public Station getStationTo() {
+        return stationTo;
     }
 
     public double getDistance() {
@@ -32,8 +32,8 @@ public class Distance {
     public void setDistance(double distance) {
         this.distance = distance;
     }
-    private int idStationFrom;
-    private int idStationTo;
+    private Station stationFrom;
+    private Station stationTo;
     private double distance; //(km)
     
     

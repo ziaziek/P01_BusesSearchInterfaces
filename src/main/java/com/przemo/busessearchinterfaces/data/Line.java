@@ -5,25 +5,28 @@
  */
 package com.przemo.busessearchinterfaces.data;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Przemo
  */
-public class Line {
+public class Line implements Serializable{
 
     public int getId() {
         return id;
     }
     
     private int id;
-    private int idBus;
-
-    public int getIdBus() {
-        return idBus;
+    private Line line;
+    private Bus bus;
+    
+    public Bus getBus() {
+        return bus;
     }
 
-    public void setIdBus(int idBus) {
-        this.idBus = idBus;
+    public void setBus(Bus idBus) {
+        this.bus = idBus;
     }
 
     public String getDescription() {
