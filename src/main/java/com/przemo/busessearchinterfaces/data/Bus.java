@@ -5,13 +5,20 @@
  */
 package com.przemo.busessearchinterfaces.data;
 
+import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
 
 /**
  *
  * @author Przemo
  */
-public class Bus {
+@Entity
+public class Bus implements Serializable {
 
     public int getId() {
         return id;
@@ -33,8 +40,11 @@ public class Bus {
         this.manufacturedOn = manufacturedOn;
     }
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String make;
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date manufacturedOn;
     
 }
