@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-04-26 15:55:11 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.przemo.busessearchinterfaces.data.Routes" table="routes" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="stations" class="com.przemo.busessearchinterfaces.data.Stations" fetch="select">
+            <column name="id_station" not-null="true" />
+        </many-to-one>
+        <property name="arrivalTime" type="time">
+            <column name="arrival_time" length="15" />
+        </property>
+        <property name="departureTime" type="time">
+            <column name="departure_time" length="15" />
+        </property>
+    </class>
+</hibernate-mapping>

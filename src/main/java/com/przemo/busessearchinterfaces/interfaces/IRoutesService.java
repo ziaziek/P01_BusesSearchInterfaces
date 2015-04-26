@@ -5,8 +5,8 @@
  */
 package com.przemo.busessearchinterfaces.interfaces;
 
-import com.przemo.busessearchinterfaces.data.Route;
-import com.przemo.busessearchinterfaces.data.Station;
+import com.przemo.busessearchinterfaces.data.Routes;
+import com.przemo.busessearchinterfaces.data.Stations;
 
 /**
  *
@@ -14,6 +14,6 @@ import com.przemo.busessearchinterfaces.data.Station;
  */
 public interface IRoutesService {
     
-    Route findRoutesBetween(Station stationFrom, Station stationTo);
+    Routes findRoutesBetween(Stations stationFrom, Stations stationTo);
     
 }

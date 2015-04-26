@@ -5,7 +5,7 @@
  */
 package com.przemo.busessearchinterfaces.interfaces;
 
-import com.przemo.busessearchinterfaces.data.Station;
+import com.przemo.busessearchinterfaces.data.Stations;
 import java.util.List;
 
 /**
@@ -14,10 +14,10 @@ import java.util.List;
  */
 public interface IStationsService {
     
-    List<Station> getAllStations();
+    List<Stations> getAllStations();
     
-    List<Station> getAvailableStationsFrom(Station stationFrom);
+    List<Stations> getAvailableStationsFrom(Stations stationFrom);
     
-    List<Station> getAvailableStationsTo(Station stationTo);
+    List<Stations> getAvailableStationsTo(Stations stationTo);
     
 }

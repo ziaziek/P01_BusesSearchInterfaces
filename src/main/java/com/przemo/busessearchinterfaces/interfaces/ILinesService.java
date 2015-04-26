@@ -5,8 +5,8 @@
  */
 package com.przemo.busessearchinterfaces.interfaces;
 
-import com.przemo.busessearchinterfaces.data.Line;
-import com.przemo.busessearchinterfaces.data.Station;
+import com.przemo.busessearchinterfaces.data.Lines;
+import com.przemo.busessearchinterfaces.data.Stations;
 
 /**
  *
@@ -14,6 +14,6 @@ import com.przemo.busessearchinterfaces.data.Station;
  */
 public interface ILinesService {
     
-    Line getLineForStations(Station stationFrom, Station stationTo);
+    Lines getLineForStations(Stations stationFrom, Stations stationTo);
     
 }
