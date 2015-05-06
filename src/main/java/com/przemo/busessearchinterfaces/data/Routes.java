@@ -1,5 +1,5 @@
 package com.przemo.busessearchinterfaces.data;
-// Generated 2015-04-26 15:55:11 by Hibernate Tools 4.3.1
+// Generated 2015-05-02 20:40:15 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -11,7 +11,9 @@ public class Routes  implements java.io.Serializable {
 
 
      private int id;
-     private Stations stations;
+     private Lines lines;
+     private Stations stationsByIdStation;
+     private Stations stationsByIdStationFrom;
      private Date arrivalTime;
      private Date departureTime;
 
@@ -19,13 +21,15 @@ public class Routes  implements java.io.Serializable {
     }
 
 	
-    public Routes(int id, Stations stations) {
+    public Routes(int id, Stations stationsByIdStation) {
         this.id = id;
-        this.stations = stations;
+        this.stationsByIdStation = stationsByIdStation;
     }
-    public Routes(int id, Stations stations, Date arrivalTime, Date departureTime) {
+    public Routes(int id, Lines lines, Stations stationsByIdStation, Stations stationsByIdStationFrom, Date arrivalTime, Date departureTime) {
        this.id = id;
-       this.stations = stations;
+       this.lines = lines;
+       this.stationsByIdStation = stationsByIdStation;
+       this.stationsByIdStationFrom = stationsByIdStationFrom;
        this.arrivalTime = arrivalTime;
        this.departureTime = departureTime;
     }
@@ -37,12 +41,26 @@ public class Routes  implements java.io.Serializable {
     public void setId(int id) {
         this.id = id;
     }
-    public Stations getStations() {
-        return this.stations;
+    public Lines getLines() {
+        return this.lines;
     }
     
-    public void setStations(Stations stations) {
-        this.stations = stations;
+    public void setLines(Lines lines) {
+        this.lines = lines;
+    }
+    public Stations getStationsByIdStation() {
+        return this.stationsByIdStation;
+    }
+    
+    public void setStationsByIdStation(Stations stationsByIdStation) {
+        this.stationsByIdStation = stationsByIdStation;
+    }
+    public Stations getStationsByIdStationFrom() {
+        return this.stationsByIdStationFrom;
+    }
+    
+    public void setStationsByIdStationFrom(Stations stationsByIdStationFrom) {
+        this.stationsByIdStationFrom = stationsByIdStationFrom;
     }
     public Date getArrivalTime() {
         return this.arrivalTime;

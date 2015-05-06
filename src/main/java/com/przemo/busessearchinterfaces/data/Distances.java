@@ -1,5 +1,5 @@
 package com.przemo.busessearchinterfaces.data;
-// Generated 2015-04-26 15:55:11 by Hibernate Tools 4.3.1
+// Generated 2015-05-02 20:40:15 by Hibernate Tools 4.3.1
 
 
 

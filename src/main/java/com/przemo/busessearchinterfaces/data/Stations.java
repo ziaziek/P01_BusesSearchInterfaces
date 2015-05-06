@@ -1,5 +1,5 @@
 package com.przemo.busessearchinterfaces.data;
-// Generated 2015-04-26 15:55:11 by Hibernate Tools 4.3.1
+// Generated 2015-05-02 20:40:15 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -13,7 +13,8 @@ public class Stations  implements java.io.Serializable {
 
      private int id;
      private String name;
-     private Set routeses = new HashSet(0);
+     private Set routesesForIdStation = new HashSet(0);
+     private Set routesesForIdStationFrom = new HashSet(0);
      private Set distancesesForStationTo = new HashSet(0);
      private Set distancesesForStationFrom = new HashSet(0);
 
@@ -25,10 +26,11 @@ public class Stations  implements java.io.Serializable {
         this.id = id;
         this.name = name;
     }
-    public Stations(int id, String name, Set routeses, Set distancesesForStationTo, Set distancesesForStationFrom) {
+    public Stations(int id, String name, Set routesesForIdStation, Set routesesForIdStationFrom, Set distancesesForStationTo, Set distancesesForStationFrom) {
        this.id = id;
        this.name = name;
-       this.routeses = routeses;
+       this.routesesForIdStation = routesesForIdStation;
+       this.routesesForIdStationFrom = routesesForIdStationFrom;
        this.distancesesForStationTo = distancesesForStationTo;
        this.distancesesForStationFrom = distancesesForStationFrom;
     }
@@ -47,12 +49,19 @@ public class Stations  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    public Set getRouteses() {
-        return this.routeses;
+    public Set getRoutesesForIdStation() {
+        return this.routesesForIdStation;
     }
     
-    public void setRouteses(Set routeses) {
-        this.routeses = routeses;
+    public void setRoutesesForIdStation(Set routesesForIdStation) {
+        this.routesesForIdStation = routesesForIdStation;
+    }
+    public Set getRoutesesForIdStationFrom() {
+        return this.routesesForIdStationFrom;
+    }
+    
+    public void setRoutesesForIdStationFrom(Set routesesForIdStationFrom) {
+        this.routesesForIdStationFrom = routesesForIdStationFrom;
     }
     public Set getDistancesesForStationTo() {
         return this.distancesesForStationTo;

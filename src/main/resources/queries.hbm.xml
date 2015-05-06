@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <query name="findLinesForStations">
+        <!-- finds all lines that contain the given stations names -->
+        <![CDATA[from Lines l join l.routes as r where r.stationsByIdStation=:stationFrom or r.stationsByIdStation=stationTo]]>
+        <!-- To find out if a given line is really from and to, departure time from the stationFrom needs to be compared with the 
+            arrival time at stationTo. If the former is before the latter, then the line is ok; otherwise should be discarded from result set.-->
+    </query>
+
+</hibernate-mapping>
