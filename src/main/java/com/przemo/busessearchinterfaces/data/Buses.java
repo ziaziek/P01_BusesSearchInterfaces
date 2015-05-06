@@ -1,5 +1,5 @@
 package com.przemo.busessearchinterfaces.data;
-// Generated 2015-05-02 20:40:15 by Hibernate Tools 4.3.1
+// Generated 2015-05-06 21:54:18 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -15,20 +15,25 @@ public class Buses  implements java.io.Serializable {
      private int id;
      private String make;
      private Date manufacturedon;
+     private Date usedSince;
+     private Date endDate;
      private Set lineses = new HashSet(0);
 
     public Buses() {
     }
 
 	
-    public Buses(int id, Date manufacturedon) {
+    public Buses(int id, Date manufacturedon, Date usedSince) {
         this.id = id;
         this.manufacturedon = manufacturedon;
+        this.usedSince = usedSince;
     }
-    public Buses(int id, String make, Date manufacturedon, Set lineses) {
+    public Buses(int id, String make, Date manufacturedon, Date usedSince, Date endDate, Set lineses) {
        this.id = id;
        this.make = make;
        this.manufacturedon = manufacturedon;
+       this.usedSince = usedSince;
+       this.endDate = endDate;
        this.lineses = lineses;
     }
    
@@ -52,6 +57,20 @@ public class Buses  implements java.io.Serializable {
     
     public void setManufacturedon(Date manufacturedon) {
         this.manufacturedon = manufacturedon;
+    }
+    public Date getUsedSince() {
+        return this.usedSince;
+    }
+    
+    public void setUsedSince(Date usedSince) {
+        this.usedSince = usedSince;
+    }
+    public Date getEndDate() {
+        return this.endDate;
+    }
+    
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
     public Set getLineses() {
         return this.lineses;

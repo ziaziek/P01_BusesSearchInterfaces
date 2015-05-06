@@ -1,5 +1,5 @@
 package com.przemo.busessearchinterfaces.data;
-// Generated 2015-05-02 20:40:15 by Hibernate Tools 4.3.1
+// Generated 2015-05-06 21:54:18 by Hibernate Tools 4.3.1
 
 
 
@@ -10,6 +10,7 @@ public class Distances  implements java.io.Serializable {
 
 
      private int id;
+     private Lines lines;
      private Stations stationsByStationTo;
      private Stations stationsByStationFrom;
      private Double distance;
@@ -21,8 +22,9 @@ public class Distances  implements java.io.Serializable {
     public Distances(int id) {
         this.id = id;
     }
-    public Distances(int id, Stations stationsByStationTo, Stations stationsByStationFrom, Double distance) {
+    public Distances(int id, Lines lines, Stations stationsByStationTo, Stations stationsByStationFrom, Double distance) {
        this.id = id;
+       this.lines = lines;
        this.stationsByStationTo = stationsByStationTo;
        this.stationsByStationFrom = stationsByStationFrom;
        this.distance = distance;
@@ -34,6 +36,13 @@ public class Distances  implements java.io.Serializable {
     
     public void setId(int id) {
         this.id = id;
+    }
+    public Lines getLines() {
+        return this.lines;
+    }
+    
+    public void setLines(Lines lines) {
+        this.lines = lines;
     }
     public Stations getStationsByStationTo() {
         return this.stationsByStationTo;

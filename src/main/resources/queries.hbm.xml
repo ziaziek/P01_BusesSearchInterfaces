@@ -7,10 +7,7 @@
 <hibernate-mapping>
 
     <query name="findLinesForStations">
-        <!-- finds all lines that contain the given stations names -->
-        <![CDATA[from Lines l join l.routes as r where r.stationsByIdStation=:stationFrom or r.stationsByIdStation=stationTo]]>
-        <!-- To find out if a given line is really from and to, departure time from the stationFrom needs to be compared with the 
-            arrival time at stationTo. If the former is before the latter, then the line is ok; otherwise should be discarded from result set.-->
+        <![CDATA[select t.Lines from Timetables t where (t.TimetablesType=1 and t.Stations=:stationFrom) or (t.TimetablesType=2 and t.Station=:stationTo)]]>
     </query>
 
 </hibernate-mapping>

@@ -1,5 +1,5 @@
 package com.przemo.busessearchinterfaces.data;
-// Generated 2015-05-02 20:40:15 by Hibernate Tools 4.3.1
+// Generated 2015-05-06 21:54:18 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -11,27 +11,27 @@ public class Routes  implements java.io.Serializable {
 
 
      private int id;
-     private Lines lines;
-     private Stations stationsByIdStation;
-     private Stations stationsByIdStationFrom;
+     private Integer idStationFrom;
+     private int idStation;
      private Date arrivalTime;
      private Date departureTime;
+     private Integer idLines;
 
     public Routes() {
     }
 
 	
-    public Routes(int id, Stations stationsByIdStation) {
+    public Routes(int id, int idStation) {
         this.id = id;
-        this.stationsByIdStation = stationsByIdStation;
+        this.idStation = idStation;
     }
-    public Routes(int id, Lines lines, Stations stationsByIdStation, Stations stationsByIdStationFrom, Date arrivalTime, Date departureTime) {
+    public Routes(int id, Integer idStationFrom, int idStation, Date arrivalTime, Date departureTime, Integer idLines) {
        this.id = id;
-       this.lines = lines;
-       this.stationsByIdStation = stationsByIdStation;
-       this.stationsByIdStationFrom = stationsByIdStationFrom;
+       this.idStationFrom = idStationFrom;
+       this.idStation = idStation;
        this.arrivalTime = arrivalTime;
        this.departureTime = departureTime;
+       this.idLines = idLines;
     }
    
     public int getId() {
@@ -41,26 +41,19 @@ public class Routes  implements java.io.Serializable {
     public void setId(int id) {
         this.id = id;
     }
-    public Lines getLines() {
-        return this.lines;
+    public Integer getIdStationFrom() {
+        return this.idStationFrom;
     }
     
-    public void setLines(Lines lines) {
-        this.lines = lines;
+    public void setIdStationFrom(Integer idStationFrom) {
+        this.idStationFrom = idStationFrom;
     }
-    public Stations getStationsByIdStation() {
-        return this.stationsByIdStation;
-    }
-    
-    public void setStationsByIdStation(Stations stationsByIdStation) {
-        this.stationsByIdStation = stationsByIdStation;
-    }
-    public Stations getStationsByIdStationFrom() {
-        return this.stationsByIdStationFrom;
+    public int getIdStation() {
+        return this.idStation;
     }
     
-    public void setStationsByIdStationFrom(Stations stationsByIdStationFrom) {
-        this.stationsByIdStationFrom = stationsByIdStationFrom;
+    public void setIdStation(int idStation) {
+        this.idStation = idStation;
     }
     public Date getArrivalTime() {
         return this.arrivalTime;
@@ -75,6 +68,13 @@ public class Routes  implements java.io.Serializable {
     
     public void setDepartureTime(Date departureTime) {
         this.departureTime = departureTime;
+    }
+    public Integer getIdLines() {
+        return this.idLines;
+    }
+    
+    public void setIdLines(Integer idLines) {
+        this.idLines = idLines;
     }
 
 

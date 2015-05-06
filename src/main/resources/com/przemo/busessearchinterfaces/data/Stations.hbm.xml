@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2015-05-02 20:40:15 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2015-05-06 21:54:18 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.przemo.busessearchinterfaces.data.Stations" table="stations" schema="public" optimistic-lock="version">
         <id name="id" type="int">
@@ -11,18 +11,9 @@
         <property name="name" type="string">
             <column name="name" length="50" not-null="true" />
         </property>
-        <set name="routesesForIdStation" table="routes" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="id_station" not-null="true" />
-            </key>
-            <one-to-many class="com.przemo.busessearchinterfaces.data.Routes" />
-        </set>
-        <set name="routesesForIdStationFrom" table="routes" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="id_station_from" />
-            </key>
-            <one-to-many class="com.przemo.busessearchinterfaces.data.Routes" />
-        </set>
+        <property name="coordinates" type="serializable">
+            <column name="coordinates" />
+        </property>
         <set name="distancesesForStationTo" table="distances" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="station_to" />
@@ -34,6 +25,12 @@
                 <column name="station_from" />
             </key>
             <one-to-many class="com.przemo.busessearchinterfaces.data.Distances" />
+        </set>
+        <set name="timetableses" table="timetables" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_stations" />
+            </key>
+            <one-to-many class="com.przemo.busessearchinterfaces.data.Timetables" />
         </set>
     </class>
 </hibernate-mapping>

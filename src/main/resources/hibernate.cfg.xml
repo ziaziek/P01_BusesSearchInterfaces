@@ -8,9 +8,12 @@
     <property name="hibernate.connection.username">przemo</property>
     <property name="hibernate.connection.password">derek</property>
     <mapping resource="com/przemo/busessearchinterfaces/data/Distances.hbm.xml"/>
+    <mapping resource="com/przemo/busessearchinterfaces/data/Timetables.hbm.xml"/>
+    <mapping resource="com/przemo/busessearchinterfaces/data/TimetablesTypes.hbm.xml"/>
     <mapping resource="com/przemo/busessearchinterfaces/data/Stations.hbm.xml"/>
     <mapping resource="com/przemo/busessearchinterfaces/data/Lines.hbm.xml"/>
     <mapping resource="com/przemo/busessearchinterfaces/data/Buses.hbm.xml"/>
     <mapping resource="com/przemo/busessearchinterfaces/data/Routes.hbm.xml"/>
+    <mapping resource="queries.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

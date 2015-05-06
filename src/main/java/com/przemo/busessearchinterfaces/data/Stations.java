@@ -1,7 +1,8 @@
 package com.przemo.busessearchinterfaces.data;
-// Generated 2015-05-02 20:40:15 by Hibernate Tools 4.3.1
+// Generated 2015-05-06 21:54:18 by Hibernate Tools 4.3.1
 
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,10 +14,10 @@ public class Stations  implements java.io.Serializable {
 
      private int id;
      private String name;
-     private Set routesesForIdStation = new HashSet(0);
-     private Set routesesForIdStationFrom = new HashSet(0);
+     private Serializable coordinates;
      private Set distancesesForStationTo = new HashSet(0);
      private Set distancesesForStationFrom = new HashSet(0);
+     private Set timetableses = new HashSet(0);
 
     public Stations() {
     }
@@ -26,13 +27,13 @@ public class Stations  implements java.io.Serializable {
         this.id = id;
         this.name = name;
     }
-    public Stations(int id, String name, Set routesesForIdStation, Set routesesForIdStationFrom, Set distancesesForStationTo, Set distancesesForStationFrom) {
+    public Stations(int id, String name, Serializable coordinates, Set distancesesForStationTo, Set distancesesForStationFrom, Set timetableses) {
        this.id = id;
        this.name = name;
-       this.routesesForIdStation = routesesForIdStation;
-       this.routesesForIdStationFrom = routesesForIdStationFrom;
+       this.coordinates = coordinates;
        this.distancesesForStationTo = distancesesForStationTo;
        this.distancesesForStationFrom = distancesesForStationFrom;
+       this.timetableses = timetableses;
     }
    
     public int getId() {
@@ -49,19 +50,12 @@ public class Stations  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    public Set getRoutesesForIdStation() {
-        return this.routesesForIdStation;
+    public Serializable getCoordinates() {
+        return this.coordinates;
     }
     
-    public void setRoutesesForIdStation(Set routesesForIdStation) {
-        this.routesesForIdStation = routesesForIdStation;
-    }
-    public Set getRoutesesForIdStationFrom() {
-        return this.routesesForIdStationFrom;
-    }
-    
-    public void setRoutesesForIdStationFrom(Set routesesForIdStationFrom) {
-        this.routesesForIdStationFrom = routesesForIdStationFrom;
+    public void setCoordinates(Serializable coordinates) {
+        this.coordinates = coordinates;
     }
     public Set getDistancesesForStationTo() {
         return this.distancesesForStationTo;
@@ -76,6 +70,13 @@ public class Stations  implements java.io.Serializable {
     
     public void setDistancesesForStationFrom(Set distancesesForStationFrom) {
         this.distancesesForStationFrom = distancesesForStationFrom;
+    }
+    public Set getTimetableses() {
+        return this.timetableses;
+    }
+    
+    public void setTimetableses(Set timetableses) {
+        this.timetableses = timetableses;
     }
 
 

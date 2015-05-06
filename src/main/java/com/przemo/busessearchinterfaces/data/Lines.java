@@ -1,5 +1,5 @@
 package com.przemo.busessearchinterfaces.data;
-// Generated 2015-05-02 20:40:15 by Hibernate Tools 4.3.1
+// Generated 2015-05-06 21:54:18 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -14,7 +14,8 @@ public class Lines  implements java.io.Serializable {
      private int id;
      private Buses buses;
      private String decription;
-     private Set routeses = new HashSet(0);
+     private Set timetableses = new HashSet(0);
+     private Set distanceses = new HashSet(0);
 
     public Lines() {
     }
@@ -24,11 +25,12 @@ public class Lines  implements java.io.Serializable {
         this.id = id;
         this.buses = buses;
     }
-    public Lines(int id, Buses buses, String decription, Set routeses) {
+    public Lines(int id, Buses buses, String decription, Set timetableses, Set distanceses) {
        this.id = id;
        this.buses = buses;
        this.decription = decription;
-       this.routeses = routeses;
+       this.timetableses = timetableses;
+       this.distanceses = distanceses;
     }
    
     public int getId() {
@@ -52,12 +54,19 @@ public class Lines  implements java.io.Serializable {
     public void setDecription(String decription) {
         this.decription = decription;
     }
-    public Set getRouteses() {
-        return this.routeses;
+    public Set getTimetableses() {
+        return this.timetableses;
     }
     
-    public void setRouteses(Set routeses) {
-        this.routeses = routeses;
+    public void setTimetableses(Set timetableses) {
+        this.timetableses = timetableses;
+    }
+    public Set getDistanceses() {
+        return this.distanceses;
+    }
+    
+    public void setDistanceses(Set distanceses) {
+        this.distanceses = distanceses;
     }
 
 

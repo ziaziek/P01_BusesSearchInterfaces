@@ -1,13 +1,16 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2015-05-02 20:40:15 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2015-05-06 21:54:18 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.przemo.busessearchinterfaces.data.Distances" table="distances" schema="public" optimistic-lock="version">
         <id name="id" type="int">
             <column name="id" />
             <generator class="assigned" />
         </id>
+        <many-to-one name="lines" class="com.przemo.busessearchinterfaces.data.Lines" fetch="select">
+            <column name="lines_id" />
+        </many-to-one>
         <many-to-one name="stationsByStationTo" class="com.przemo.busessearchinterfaces.data.Stations" fetch="select">
             <column name="station_to" />
         </many-to-one>
