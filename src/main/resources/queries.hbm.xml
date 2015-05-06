@@ -9,5 +9,9 @@
     <query name="findLinesForStations">
         <![CDATA[select t.Lines from Timetables t where (t.TimetablesType=1 and t.Stations=:stationFrom) or (t.TimetablesType=2 and t.Station=:stationTo)]]>
     </query>
+    
+    <query name="sqlFindLinesRoutesForId">
+        <![CDATA[select s.name, t.stationTime as arrival, t1.stationTime as departure from stations s join timetables t on s.id=t.id_stations  join timetables t1 on s.id=t1.id_stations where t.id_timetable_types=1 and t1.id_lines=:id and t1.id_timetables_types=2 and t1.id_lines=:id order by t.station_time, t1.station_time]]>
+    </query>
 
 </hibernate-mapping>
