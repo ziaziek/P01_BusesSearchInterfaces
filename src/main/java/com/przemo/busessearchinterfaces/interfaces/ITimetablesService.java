@@ -7,14 +7,15 @@ package com.przemo.busessearchinterfaces.interfaces;
 
 import com.przemo.busessearchinterfaces.data.Lines;
 import com.przemo.busessearchinterfaces.data.Stations;
+import com.przemo.busessearchinterfaces.data.Timetables;
 import java.util.List;
 
 /**
  *
  * @author Przemo
  */
-public interface ILinesService {
+public interface ITimetablesService {
     
-    List<Lines> getLinesForStations(Stations stationFrom, Stations stationTo);
+    List<Timetables> getTimetableForLineStations(Stations stationFrom, Stations stationTo, Lines line);
     
 }
