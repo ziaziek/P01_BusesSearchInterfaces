@@ -1,5 +1,5 @@
 package com.przemo.busessearchinterfaces.data;
-// Generated 2015-05-06 21:54:18 by Hibernate Tools 4.3.1
+// Generated 2015-08-09 11:52:28 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -12,24 +12,27 @@ public class Timetables  implements java.io.Serializable {
 
      private int id;
      private Lines lines;
-     private Stations stations;
-     private TimetablesTypes timetablesTypes;
-     private Date stationTime;
+     private Stations stationsByNodeTo;
+     private Stations stationsByNodeFrom;
+     private Date arriveAtNodeFrom;
+     private Date departToNodeTo;
 
     public Timetables() {
     }
 
 	
-    public Timetables(int id, Date stationTime) {
+    public Timetables(int id, Lines lines, Stations stationsByNodeFrom) {
         this.id = id;
-        this.stationTime = stationTime;
+        this.lines = lines;
+        this.stationsByNodeFrom = stationsByNodeFrom;
     }
-    public Timetables(int id, Lines lines, Stations stations, TimetablesTypes timetablesTypes, Date stationTime) {
+    public Timetables(int id, Lines lines, Stations stationsByNodeTo, Stations stationsByNodeFrom, Date arriveAtNodeFrom, Date departToNodeTo) {
        this.id = id;
        this.lines = lines;
-       this.stations = stations;
-       this.timetablesTypes = timetablesTypes;
-       this.stationTime = stationTime;
+       this.stationsByNodeTo = stationsByNodeTo;
+       this.stationsByNodeFrom = stationsByNodeFrom;
+       this.arriveAtNodeFrom = arriveAtNodeFrom;
+       this.departToNodeTo = departToNodeTo;
     }
    
     public int getId() {
@@ -46,26 +49,33 @@ public class Timetables  implements java.io.Serializable {
     public void setLines(Lines lines) {
         this.lines = lines;
     }
-    public Stations getStations() {
-        return this.stations;
+    public Stations getStationsByNodeTo() {
+        return this.stationsByNodeTo;
     }
     
-    public void setStations(Stations stations) {
-        this.stations = stations;
+    public void setStationsByNodeTo(Stations stationsByNodeTo) {
+        this.stationsByNodeTo = stationsByNodeTo;
     }
-    public TimetablesTypes getTimetablesTypes() {
-        return this.timetablesTypes;
-    }
-    
-    public void setTimetablesTypes(TimetablesTypes timetablesTypes) {
-        this.timetablesTypes = timetablesTypes;
-    }
-    public Date getStationTime() {
-        return this.stationTime;
+    public Stations getStationsByNodeFrom() {
+        return this.stationsByNodeFrom;
     }
     
-    public void setStationTime(Date stationTime) {
-        this.stationTime = stationTime;
+    public void setStationsByNodeFrom(Stations stationsByNodeFrom) {
+        this.stationsByNodeFrom = stationsByNodeFrom;
+    }
+    public Date getArriveAtNodeFrom() {
+        return this.arriveAtNodeFrom;
+    }
+    
+    public void setArriveAtNodeFrom(Date arriveAtNodeFrom) {
+        this.arriveAtNodeFrom = arriveAtNodeFrom;
+    }
+    public Date getDepartToNodeTo() {
+        return this.departToNodeTo;
+    }
+    
+    public void setDepartToNodeTo(Date departToNodeTo) {
+        this.departToNodeTo = departToNodeTo;
     }
 
 

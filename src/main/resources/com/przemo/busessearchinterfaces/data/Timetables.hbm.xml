@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2015-05-06 21:54:18 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2015-08-09 11:52:29 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.przemo.busessearchinterfaces.data.Timetables" table="timetables" schema="public" optimistic-lock="version">
         <id name="id" type="int">
@@ -9,16 +9,19 @@
             <generator class="assigned" />
         </id>
         <many-to-one name="lines" class="com.przemo.busessearchinterfaces.data.Lines" fetch="select">
-            <column name="id_lines" />
+            <column name="id_lines" not-null="true" />
         </many-to-one>
-        <many-to-one name="stations" class="com.przemo.busessearchinterfaces.data.Stations" fetch="select">
-            <column name="id_stations" />
+        <many-to-one name="stationsByNodeTo" class="com.przemo.busessearchinterfaces.data.Stations" fetch="select">
+            <column name="node_to" />
         </many-to-one>
-        <many-to-one name="timetablesTypes" class="com.przemo.busessearchinterfaces.data.TimetablesTypes" fetch="select">
-            <column name="id_timetables_type" />
+        <many-to-one name="stationsByNodeFrom" class="com.przemo.busessearchinterfaces.data.Stations" fetch="select">
+            <column name="node_from" not-null="true" />
         </many-to-one>
-        <property name="stationTime" type="date">
-            <column name="station_time" length="13" not-null="true" />
+        <property name="arriveAtNodeFrom" type="time">
+            <column name="arrive_at_node_from" length="15" />
+        </property>
+        <property name="departToNodeTo" type="time">
+            <column name="depart_to_node_to" length="15" />
         </property>
     </class>
 </hibernate-mapping>

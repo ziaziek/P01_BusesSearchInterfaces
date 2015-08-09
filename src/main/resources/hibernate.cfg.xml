@@ -4,11 +4,11 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-    <property name="hibernate.connection.url">jdbc:postgresql://192.168.2.6:5432/busessearch</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/busessearch</property>
     <property name="hibernate.connection.username">przemo</property>
     <property name="hibernate.connection.password">derek</property>
-    <mapping resource="com/przemo/busessearchinterfaces/data/Distances.hbm.xml"/>
     <mapping resource="com/przemo/busessearchinterfaces/data/Timetables.hbm.xml"/>
+    <mapping resource="com/przemo/busessearchinterfaces/data/Distances.hbm.xml"/>
     <mapping resource="com/przemo/busessearchinterfaces/data/TimetablesTypes.hbm.xml"/>
     <mapping resource="com/przemo/busessearchinterfaces/data/Stations.hbm.xml"/>
     <mapping resource="com/przemo/busessearchinterfaces/data/Lines.hbm.xml"/>

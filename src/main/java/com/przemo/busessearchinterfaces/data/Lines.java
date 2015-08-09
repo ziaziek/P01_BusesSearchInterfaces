@@ -1,5 +1,5 @@
 package com.przemo.busessearchinterfaces.data;
-// Generated 2015-05-06 21:54:18 by Hibernate Tools 4.3.1
+// Generated 2015-08-09 11:52:28 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;

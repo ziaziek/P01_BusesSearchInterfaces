@@ -2,11 +2,11 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="busessearch" match-schema="public"/>
+  <table-filter match-name="timetables_types"/>
   <table-filter match-name="timetables"/>
+  <table-filter match-name="stations"/>
   <table-filter match-name="buses"/>
   <table-filter match-name="distances"/>
   <table-filter match-name="lines"/>
-  <table-filter match-name="stations"/>
   <table-filter match-name="routes"/>
-  <table-filter match-name="timetables_types"/>
 </hibernate-reverse-engineering>

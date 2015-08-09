@@ -11,7 +11,7 @@ import com.przemo.busessearchinterfaces.data.Timetables;
 import java.util.List;
 
 /**
- *
+ * Gets the whole timetable from station A to station B
  * @author Przemo
  */
 public interface ITimetablesService {

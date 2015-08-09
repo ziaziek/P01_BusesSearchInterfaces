@@ -1,5 +1,5 @@
 package com.przemo.busessearchinterfaces.data;
-// Generated 2015-05-06 21:54:18 by Hibernate Tools 4.3.1
+// Generated 2015-08-09 11:52:28 by Hibernate Tools 4.3.1
 
 
 import java.io.Serializable;
@@ -15,9 +15,10 @@ public class Stations  implements java.io.Serializable {
      private int id;
      private String name;
      private Serializable coordinates;
+     private Set timetablesesForNodeTo = new HashSet(0);
+     private Set timetablesesForNodeFrom = new HashSet(0);
      private Set distancesesForStationTo = new HashSet(0);
      private Set distancesesForStationFrom = new HashSet(0);
-     private Set timetableses = new HashSet(0);
 
     public Stations() {
     }
@@ -27,13 +28,14 @@ public class Stations  implements java.io.Serializable {
         this.id = id;
         this.name = name;
     }
-    public Stations(int id, String name, Serializable coordinates, Set distancesesForStationTo, Set distancesesForStationFrom, Set timetableses) {
+    public Stations(int id, String name, Serializable coordinates, Set timetablesesForNodeTo, Set timetablesesForNodeFrom, Set distancesesForStationTo, Set distancesesForStationFrom) {
        this.id = id;
        this.name = name;
        this.coordinates = coordinates;
+       this.timetablesesForNodeTo = timetablesesForNodeTo;
+       this.timetablesesForNodeFrom = timetablesesForNodeFrom;
        this.distancesesForStationTo = distancesesForStationTo;
        this.distancesesForStationFrom = distancesesForStationFrom;
-       this.timetableses = timetableses;
     }
    
     public int getId() {
@@ -57,6 +59,20 @@ public class Stations  implements java.io.Serializable {
     public void setCoordinates(Serializable coordinates) {
         this.coordinates = coordinates;
     }
+    public Set getTimetablesesForNodeTo() {
+        return this.timetablesesForNodeTo;
+    }
+    
+    public void setTimetablesesForNodeTo(Set timetablesesForNodeTo) {
+        this.timetablesesForNodeTo = timetablesesForNodeTo;
+    }
+    public Set getTimetablesesForNodeFrom() {
+        return this.timetablesesForNodeFrom;
+    }
+    
+    public void setTimetablesesForNodeFrom(Set timetablesesForNodeFrom) {
+        this.timetablesesForNodeFrom = timetablesesForNodeFrom;
+    }
     public Set getDistancesesForStationTo() {
         return this.distancesesForStationTo;
     }
@@ -70,13 +86,6 @@ public class Stations  implements java.io.Serializable {
     
     public void setDistancesesForStationFrom(Set distancesesForStationFrom) {
         this.distancesesForStationFrom = distancesesForStationFrom;
-    }
-    public Set getTimetableses() {
-        return this.timetableses;
-    }
-    
-    public void setTimetableses(Set timetableses) {
-        this.timetableses = timetableses;
     }
 
 
