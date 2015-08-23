@@ -11,10 +11,10 @@
         <many-to-one name="lines" class="com.przemo.busessearchinterfaces.data.Lines" fetch="select">
             <column name="id_lines" not-null="true" />
         </many-to-one>
-        <many-to-one name="stationsByNodeTo" class="com.przemo.busessearchinterfaces.data.Stations" fetch="select">
+        <many-to-one name="stationsByNodeTo" class="com.przemo.busessearchinterfaces.data.Stations" fetch="select" lazy="false">
             <column name="node_to" />
         </many-to-one>
-        <many-to-one name="stationsByNodeFrom" class="com.przemo.busessearchinterfaces.data.Stations" fetch="select">
+        <many-to-one name="stationsByNodeFrom" class="com.przemo.busessearchinterfaces.data.Stations" fetch="select" lazy="false">
             <column name="node_from" not-null="true" />
         </many-to-one>
         <property name="arriveAtNodeFrom" type="time">
